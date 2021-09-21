@@ -431,7 +431,7 @@ export default {
         .setAttribute(
           "style",
           "width:" +
-          (previewImg.naturalWidth + thumbListWidth + 2) + // 2px for grid gap
+          (previewImg.naturalWidth + thumbListWidth + 20) + // 2px for grid gap
             "px;position:relative"
         );
       document
@@ -510,13 +510,11 @@ export default {
 }
 .scroller-at-left .thumb-list {
   display: grid;
-  grid-gap: 20px;
   grid-row-gap: 0;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   visibility: hidden;
   justify-items: center;
-  padding-right: 20px;
 }
 
 .scroller-at-right {
