@@ -562,7 +562,8 @@ export default {
 .pane-container {
   display: none;
   position: absolute;
-  z-index: 10000;
+  z-index: 1000;
   pointer-events: none;
+  border-radius: 8px;
 }
 </style>
