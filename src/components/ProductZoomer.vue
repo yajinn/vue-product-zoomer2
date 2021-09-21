@@ -1,18 +1,24 @@
 <template>
-  <div :class="options.namespace + '-base-container scroller-at-' + options.scroller_position">
+  <div
+    :class="
+      options.namespace +
+        '-base-container scroller-at-' +
+        options.scroller_position
+    "
+  >
     <img
       :src="previewImg.url"
       :data-zoom="previewLargeImg.url"
       class="responsive-image preview-box"
       draggable="false"
-    >
+    />
     <div class="thumb-list">
       <img
         @click="moveThumbs('backward')"
         :src="scroller_icon_first"
         class="zoomer-control responsive-image"
         alt="move thumb icon"
-      >
+      />
       <img
         @mouseover="chooseThumb(thumb, $event)"
         draggable="false"
@@ -22,15 +28,20 @@
         @click="chooseThumb(thumb, $event)"
         v-for="(thumb, key) in thumbs"
         class="responsive-image"
-        v-bind:style="{'boxShadow' : thumb.id === choosedThumb.id ? '0px 0px 0px 2px ' + options.choosed_thumb_border_color : ''}"
-        :class="{'choosed-thumb': thumb.id === choosedThumb.id}"
-      >
+        v-bind:style="{
+          boxShadow:
+            thumb.id === choosedThumb.id
+              ? '0px 0px 0px 2px ' + options.choosed_thumb_border_color
+              : ''
+        }"
+        :class="{ 'choosed-thumb': thumb.id === choosedThumb.id }"
+      />
       <img
         @click="moveThumbs('forward')"
         :src="scroller_icon_second"
         class="zoomer-control responsive-image"
         alt="move thumb icon"
-      >
+      />
     </div>
     <div :id="pane_container_id" class="pane-container"></div>
   </div>
@@ -57,20 +68,23 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
       rect.width +
       "px;height:" +
       rect.height +
-      "px;left:" + (paneStyle === "container" ? 0 : (0 - rect.width - window.scrollX - 5)) +
+      "px;left:" +
+      (paneStyle === "container" ? 0 : 0 - rect.width - window.scrollX - 5) +
       "px;";
   } else if (PanePosition === "right") {
     caculatedPosition =
       "width:" +
+      30 +
       rect.width +
       "px;height:" +
       rect.height +
-      "px;left:" + (paneStyle === "container" ? 0 : (rect.width + window.scrollX + 5)) +
+      "px;left:" +
+      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) +
       "px;";
   }
 
   return caculatedPosition;
-}
+};
 
 export default {
   name: "ProductZoomer",
@@ -126,13 +140,13 @@ export default {
     },
     scroller_icon_first: function() {
       if (["top", "bottom"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return LineLeft;
         } else {
           return FillLeft;
         }
       } else if (["left", "right"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return LineUp;
         } else {
           return FillUp;
@@ -141,13 +155,13 @@ export default {
     },
     scroller_icon_second: function() {
       if (["top", "bottom"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return LineRight;
         } else {
           return FillRight;
         }
       } else if (["left", "right"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return LineDown;
         } else {
           return FillDown;
@@ -169,7 +183,7 @@ export default {
     if (!["left", "right"].includes(this.options.zoomer_pane_position)) {
       throw "zoomer_pane_position is invalid";
     }
-    window.addEventListener("load",() => {
+    window.addEventListener("load", () => {
       this[actionName(this.options.scroller_position)]();
       this.options.injectBaseStyles = true;
       if (this.options.pane === "container-round") {
@@ -282,7 +296,10 @@ export default {
       let thumbList = document.querySelector(
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
-      let thumbListHeight = thumbList.children[1].naturalHeight * (previewImg.naturalWidth / thumbList.children[1].naturalWidth) / (scrollerItemsCount - 1)
+      let thumbListHeight =
+        (thumbList.children[1].naturalHeight *
+          (previewImg.naturalWidth / thumbList.children[1].naturalWidth)) /
+        (scrollerItemsCount - 1);
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
@@ -321,13 +338,16 @@ export default {
       let thumbList = document.querySelector(
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
-      let thumbListHeight = thumbList.children[1].naturalHeight * (previewImg.naturalWidth / thumbList.children[1].naturalWidth) / (scrollerItemsCount - 1)
+      let thumbListHeight =
+        (thumbList.children[1].naturalHeight *
+          (previewImg.naturalWidth / thumbList.children[1].naturalWidth)) /
+        (scrollerItemsCount - 1);
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
           "style",
           "height:" +
-            (previewImg.naturalHeight + thumbListHeight + 2) + // 2px for grid gap
+          (previewImg.naturalHeight + thumbListHeight + 2) + // 2px for grid gap
             "px;width:" +
             previewImg.naturalHeight +
             "px;position:relative"
@@ -360,7 +380,10 @@ export default {
       let thumbList = document.querySelector(
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
-      let thumbListWidth = thumbList.children[1].naturalWidth * (previewImg.naturalHeight / thumbList.children[1].naturalHeight) / (scrollerItemsCount - 1)
+      let thumbListWidth =
+        (thumbList.children[1].naturalWidth *
+          (previewImg.naturalHeight / thumbList.children[1].naturalHeight)) /
+        (scrollerItemsCount - 1);
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
@@ -397,13 +420,16 @@ export default {
       let thumbList = document.querySelector(
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
-      let thumbListWidth = thumbList.children[1].naturalWidth * (previewImg.naturalHeight / thumbList.children[1].naturalHeight) / (scrollerItemsCount - 1)
+      let thumbListWidth =
+        (thumbList.children[1].naturalWidth *
+          (previewImg.naturalHeight / thumbList.children[1].naturalHeight)) /
+        (scrollerItemsCount - 1);
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
           "style",
           "width:" +
-            (previewImg.naturalWidth + thumbListWidth + 2) + // 2px for grid gap
+          (previewImg.naturalWidth + thumbListWidth + 2) + // 2px for grid gap
             "px;position:relative"
         );
       document
