@@ -1,9 +1,9 @@
 {
-  "name": "vue-product-zoomer",
+  "name": "vue-product-zoomer2",
   "version": "3.0.1",
   "main": "dist/assets/js/app.bundle.js",
   "description": "Vue Package for responsive Zoom Product Images . Under Bootstrap 3 environment.",
-  "author": "akulubala@gmail.com",
+  "author": "yajinn@gmail.com",
   "private": false,
   "scripts": {
     "dev": "NODE_ENV=development node_modules/.bin/webpack-dev-server --open --config webpack.dev.config.js",
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akulubala/vue-product-zoomer.git"
+    "url": "git+https://github.com/yajinn/vue-product-zoomer2"
   },
   "bugs": {
-    "url": "https://github.com/akulubala/vue-product-zoomer/issues"
+    "url": "https://github.com/yajinn/vue-product-zoomer2/issues"
   }
 }
