@@ -78,10 +78,8 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
       "px;height:" +
       rect.height +
       "px;left:" +
-      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) +
-      40 +
-      "px;" +
-      "border-radius:8px;";
+      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 30);
+    ("px;");
   }
 
   return caculatedPosition;
@@ -564,6 +562,5 @@ export default {
   position: absolute;
   z-index: 1000;
   pointer-events: none;
-  border-radius: 8px;
 }
 </style>
