@@ -172,6 +172,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -195,7 +206,7 @@ var getCaculatedPanePosition = function getCaculatedPanePosition() {
   if (PanePosition === "left") {
     caculatedPosition = "width:" + rect.width + "px;height:" + rect.height + "px;left:" + (paneStyle === "container" ? 0 : 0 - rect.width - window.scrollX - 5) + "px;";
   } else if (PanePosition === "right") {
-    caculatedPosition = "width:" + rect.width + "px;height:" + rect.height + "px;left:" + (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) + "px;";
+    caculatedPosition = "width:" + 30 + rect.width + "px;height:" + rect.height + "px;left:" + (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) + "px;";
   }
 
   return caculatedPosition;
@@ -253,13 +264,13 @@ var getCaculatedPanePosition = function getCaculatedPanePosition() {
     },
     scroller_icon_first: function scroller_icon_first() {
       if (["top", "bottom"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return _assets_svg_icons_arrow_left_s_line_svg__WEBPACK_IMPORTED_MODULE_4___default.a;
         } else {
           return _assets_svg_icons_arrow_left_s_fill_svg__WEBPACK_IMPORTED_MODULE_3___default.a;
         }
       } else if (["left", "right"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return _assets_svg_icons_arrow_up_s_line_svg__WEBPACK_IMPORTED_MODULE_8___default.a;
         } else {
           return _assets_svg_icons_arrow_up_s_fill_svg__WEBPACK_IMPORTED_MODULE_7___default.a;
@@ -268,13 +279,13 @@ var getCaculatedPanePosition = function getCaculatedPanePosition() {
     },
     scroller_icon_second: function scroller_icon_second() {
       if (["top", "bottom"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return _assets_svg_icons_arrow_right_s_line_svg__WEBPACK_IMPORTED_MODULE_6___default.a;
         } else {
           return _assets_svg_icons_arrow_right_s_fill_svg__WEBPACK_IMPORTED_MODULE_5___default.a;
         }
       } else if (["left", "right"].includes(this.options.scroller_position)) {
-        if (this.options.scroller_button_style === 'line') {
+        if (this.options.scroller_button_style === "line") {
           return _assets_svg_icons_arrow_down_s_line_svg__WEBPACK_IMPORTED_MODULE_2___default.a;
         } else {
           return _assets_svg_icons_arrow_down_s_fill_svg__WEBPACK_IMPORTED_MODULE_1___default.a;
@@ -449,16 +460,16 @@ exports.push([module.i, "\n", ""]);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&":
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--2-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--2-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& ***!
   \**************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "\n.scroller-at-top[data-v-1b48a352] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n  align-items: center;\n}\n.scroller-at-top .preview-box[data-v-1b48a352] {\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n}\n.scroller-at-top .thumb-list[data-v-1b48a352] {\n  display: grid;\n  align-items: center;\n  grid-column-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n  visibility: hidden;\n}\n.scroller-at-bottom[data-v-1b48a352] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n  align-items: center;\n}\n.scroller-at-bottom .preview-box[data-v-1b48a352] {\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n}\n.scroller-at-bottom .thumb-list[data-v-1b48a352] {\n  display: grid;\n  align-items: center;\n  grid-column-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n  visibility: hidden;\n}\n.scroller-at-left[data-v-1b48a352] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n}\n.scroller-at-left .preview-box[data-v-1b48a352] {\n  grid-column: 2 / 3;\n  grid-row: 1 / 2;\n}\n.scroller-at-left .thumb-list[data-v-1b48a352] {\n  display: grid;\n  grid-row-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n  visibility: hidden;\n  justify-items: center;\n}\n.scroller-at-right[data-v-1b48a352] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n}\n.scroller-at-right .preview-box[data-v-1b48a352] {\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n}\n.scroller-at-right .thumb-list[data-v-1b48a352] {\n  display: grid;\n  grid-row-gap: 0.2em;\n  grid-column: 2 / 3;\n  grid-row: 1 / 2;\n  visibility: hidden;\n  justify-items: center;\n}\n.scroller-at-right .thumb-list .responsive-image[data-v-1b48a352],\n.scroller-at-left .thumb-list .responsive-image[data-v-1b48a352] {\n  width: auto;\n  height: 100%;\n}\n.scroller-at-top .thumb-list .responsive-image[data-v-1b48a352],\n.scroller-at-bottom .thumb-list .responsive-image[data-v-1b48a352] {\n  height: auto;\n  width: 100%;\n}\n.zoomer-control[data-v-1b48a352] {\n  cursor: pointer;\n}\n.choosed-thumb[data-v-1b48a352] {\n  border-radius: 0px;\n}\n.pane-container[data-v-1b48a352] {\n  display: none;\n  position: absolute;\n  z-index: 10000;\n  pointer-events: none;\n}\n", ""]);
+exports.push([module.i, "\n.scroller-at-top[data-v-6a55e2d9] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n  align-items: center;\n}\n.scroller-at-top .preview-box[data-v-6a55e2d9] {\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n}\n.scroller-at-top .thumb-list[data-v-6a55e2d9] {\n  display: grid;\n  align-items: center;\n  grid-column-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n  visibility: hidden;\n}\n.scroller-at-bottom[data-v-6a55e2d9] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n  align-items: center;\n}\n.scroller-at-bottom .preview-box[data-v-6a55e2d9] {\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n}\n.scroller-at-bottom .thumb-list[data-v-6a55e2d9] {\n  display: grid;\n  align-items: center;\n  grid-column-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 2 / 3;\n  visibility: hidden;\n}\n.scroller-at-left[data-v-6a55e2d9] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n}\n.scroller-at-left .preview-box[data-v-6a55e2d9] {\n  grid-column: 2 / 3;\n  grid-row: 1 / 2;\n}\n.scroller-at-left .thumb-list[data-v-6a55e2d9] {\n  display: grid;\n  grid-row-gap: 0.2em;\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n  visibility: hidden;\n  justify-items: center;\n}\n.scroller-at-right[data-v-6a55e2d9] {\n  display: grid;\n  grid-gap: 2px;\n  grid-template-columns: 1fr;\n}\n.scroller-at-right .preview-box[data-v-6a55e2d9] {\n  grid-column: 1 / 2;\n  grid-row: 1 / 2;\n}\n.scroller-at-right .thumb-list[data-v-6a55e2d9] {\n  display: grid;\n  grid-row-gap: 0.2em;\n  grid-column: 2 / 3;\n  grid-row: 1 / 2;\n  visibility: hidden;\n  justify-items: center;\n}\n.scroller-at-right .thumb-list .responsive-image[data-v-6a55e2d9],\n.scroller-at-left .thumb-list .responsive-image[data-v-6a55e2d9] {\n  width: auto;\n  height: 100%;\n}\n.scroller-at-top .thumb-list .responsive-image[data-v-6a55e2d9],\n.scroller-at-bottom .thumb-list .responsive-image[data-v-6a55e2d9] {\n  height: auto;\n  width: 100%;\n}\n.zoomer-control[data-v-6a55e2d9] {\n  cursor: pointer;\n}\n.choosed-thumb[data-v-6a55e2d9] {\n  border-radius: 0px;\n}\n.pane-container[data-v-6a55e2d9] {\n  display: none;\n  position: absolute;\n  z-index: 10000;\n  pointer-events: none;\n}\n", ""]);
 
 
 
@@ -473,7 +484,7 @@ exports.push([module.i, "\n.scroller-at-top[data-v-1b48a352] {\n  display: grid;
 
 exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "@keyframes drift-fadeZoomIn {\n0% {\n    transform: scale(1.5);\n    opacity: 0;\n}\n100% {\n    transform: scale(1);\n    opacity: 1;\n}\n}\n@keyframes drift-fadeZoomOut {\n0% {\n    transform: scale(1);\n    opacity: 1;\n}\n15% {\n    transform: scale(1.1);\n    opacity: 1;\n}\n100% {\n    transform: scale(0.5);\n    opacity: 0;\n}\n}\n@keyframes drift-loader-rotate {\n0% {\n    transform: translate(-50%, -50%) rotate(0);\n}\n50% {\n    transform: translate(-50%, -50%) rotate(-180deg);\n}\n100% {\n    transform: translate(-50%, -50%) rotate(-360deg);\n}\n}\n@keyframes drift-loader-before {\n0% {\n    transform: scale(1);\n}\n10% {\n    transform: scale(1.2) translateX(6px);\n}\n25% {\n    transform: scale(1.3) translateX(8px);\n}\n40% {\n    transform: scale(1.2) translateX(6px);\n}\n50% {\n    transform: scale(1);\n}\n60% {\n    transform: scale(0.8) translateX(6px);\n}\n75% {\n    transform: scale(0.7) translateX(8px);\n}\n90% {\n    transform: scale(0.8) translateX(6px);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes drift-loader-after {\n0% {\n    transform: scale(1);\n}\n10% {\n    transform: scale(1.2) translateX(-6px);\n}\n25% {\n    transform: scale(1.3) translateX(-8px);\n}\n40% {\n    transform: scale(1.2) translateX(-6px);\n}\n50% {\n    transform: scale(1);\n}\n60% {\n    transform: scale(0.8) translateX(-6px);\n}\n75% {\n    transform: scale(0.7) translateX(-8px);\n}\n90% {\n    transform: scale(0.8) translateX(-6px);\n}\n100% {\n    transform: scale(1);\n}\n}\n@-webkit-keyframes drift-fadeZoomIn {\n0% {\n    -webkit-transform: scale(1.5);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: scale(1);\n    opacity: 1;\n}\n}\n@-webkit-keyframes drift-fadeZoomOut {\n0% {\n    -webkit-transform: scale(1);\n    opacity: 1;\n}\n15% {\n    -webkit-transform: scale(1.1);\n    opacity: 1;\n}\n100% {\n    -webkit-transform: scale(0.5);\n    opacity: 0;\n}\n}\n@-webkit-keyframes drift-loader-rotate {\n0% {\n    -webkit-transform: translate(-50%, -50%) rotate(0);\n}\n50% {\n    -webkit-transform: translate(-50%, -50%) rotate(-180deg);\n}\n100% {\n    -webkit-transform: translate(-50%, -50%) rotate(-360deg);\n}\n}\n@-webkit-keyframes drift-loader-before {\n0% {\n    -webkit-transform: scale(1);\n}\n10% {\n    -webkit-transform: scale(1.2) translateX(6px);\n}\n25% {\n    -webkit-transform: scale(1.3) translateX(8px);\n}\n40% {\n    -webkit-transform: scale(1.2) translateX(6px);\n}\n50% {\n    -webkit-transform: scale(1);\n}\n60% {\n    -webkit-transform: scale(0.8) translateX(6px);\n}\n75% {\n    -webkit-transform: scale(0.7) translateX(8px);\n}\n90% {\n    -webkit-transform: scale(0.8) translateX(6px);\n}\n100% {\n    -webkit-transform: scale(1);\n}\n}\n@-webkit-keyframes drift-loader-after {\n0% {\n    -webkit-transform: scale(1);\n}\n10% {\n    -webkit-transform: scale(1.2) translateX(-6px);\n}\n25% {\n    -webkit-transform: scale(1.3) translateX(-8px);\n}\n40% {\n    -webkit-transform: scale(1.2) translateX(-6px);\n}\n50% {\n    -webkit-transform: scale(1);\n}\n60% {\n    -webkit-transform: scale(0.8) translateX(-6px);\n}\n75% {\n    -webkit-transform: scale(0.7) translateX(-8px);\n}\n90% {\n    -webkit-transform: scale(0.8) translateX(-6px);\n}\n100% {\n    -webkit-transform: scale(1);\n}\n}\n.drift-zoom-pane {\n  background: rgba(0, 0, 0, 0.5);\n  /* This is required because of a bug that causes border-radius to not\n  work with child elements in certain cases. */\n  transform: translate3d(0, 0, 0);\n  -webkit-transform: translate3d(0, 0, 0);\n}\n.drift-zoom-pane.drift-opening {\n  animation: drift-fadeZoomIn 180ms ease-out;\n  -webkit-animation: drift-fadeZoomIn 180ms ease-out;\n}\n.drift-zoom-pane.drift-closing {\n  animation: drift-fadeZoomOut 210ms ease-in;\n  -webkit-animation: drift-fadeZoomOut 210ms ease-in;\n}\n.drift-zoom-pane.drift-inline {\n  position: absolute;\n  width: 150px;\n  height: 150px;\n  border-radius: 75px;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);\n}\n.drift-loading .drift-zoom-pane-loader {\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  width: 66px;\n  height: 20px;\n  animation: drift-loader-rotate 1800ms infinite linear;\n  -webkit-animation: drift-loader-rotate 1800ms infinite linear;\n}\n.drift-zoom-pane-loader:before,\n.drift-zoom-pane-loader:after {\n  content: '';\n  display: block;\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 50%;\n  margin-top: -10px;\n  border-radius: 20px;\n  background: rgba(255, 255, 255, 0.9);\n}\n.drift-zoom-pane-loader:before {\n  left: 0;\n  animation: drift-loader-before 1800ms infinite linear;\n  -webkit-animation: drift-loader-before 1800ms infinite linear;\n}\n.drift-zoom-pane-loader:after {\n  right: 0;\n  animation: drift-loader-after 1800ms infinite linear;\n  -webkit-animation: drift-loader-after 1800ms infinite linear;\n  animation-delay: -900ms;\n  -webkit-animation-delay: -900ms;\n}\n.drift-bounding-box {\n  background-color: rgba(0, 0, 0, 0.4);\n}\n", ""]);
+exports.push([module.i, "@keyframes drift-fadeZoomIn {\n0% {\n    transform: scale(1.5);\n    opacity: 0;\n}\n100% {\n    transform: scale(1);\n    opacity: 1;\n}\n}\n@keyframes drift-fadeZoomOut {\n0% {\n    transform: scale(1);\n    opacity: 1;\n}\n15% {\n    transform: scale(1.1);\n    opacity: 1;\n}\n100% {\n    transform: scale(0.5);\n    opacity: 0;\n}\n}\n@keyframes drift-loader-rotate {\n0% {\n    transform: translate(-50%, -50%) rotate(0);\n}\n50% {\n    transform: translate(-50%, -50%) rotate(-180deg);\n}\n100% {\n    transform: translate(-50%, -50%) rotate(-360deg);\n}\n}\n@keyframes drift-loader-before {\n0% {\n    transform: scale(1);\n}\n10% {\n    transform: scale(1.2) translateX(6px);\n}\n25% {\n    transform: scale(1.3) translateX(8px);\n}\n40% {\n    transform: scale(1.2) translateX(6px);\n}\n50% {\n    transform: scale(1);\n}\n60% {\n    transform: scale(0.8) translateX(6px);\n}\n75% {\n    transform: scale(0.7) translateX(8px);\n}\n90% {\n    transform: scale(0.8) translateX(6px);\n}\n100% {\n    transform: scale(1);\n}\n}\n@keyframes drift-loader-after {\n0% {\n    transform: scale(1);\n}\n10% {\n    transform: scale(1.2) translateX(-6px);\n}\n25% {\n    transform: scale(1.3) translateX(-8px);\n}\n40% {\n    transform: scale(1.2) translateX(-6px);\n}\n50% {\n    transform: scale(1);\n}\n60% {\n    transform: scale(0.8) translateX(-6px);\n}\n75% {\n    transform: scale(0.7) translateX(-8px);\n}\n90% {\n    transform: scale(0.8) translateX(-6px);\n}\n100% {\n    transform: scale(1);\n}\n}\n@-webkit-keyframes drift-fadeZoomIn {\n0% {\n    -webkit-transform: scale(1.5);\n    opacity: 0;\n}\n100% {\n    -webkit-transform: scale(1);\n    opacity: 1;\n}\n}\n@-webkit-keyframes drift-fadeZoomOut {\n0% {\n    -webkit-transform: scale(1);\n    opacity: 1;\n}\n15% {\n    -webkit-transform: scale(1.1);\n    opacity: 1;\n}\n100% {\n    -webkit-transform: scale(0.5);\n    opacity: 0;\n}\n}\n@-webkit-keyframes drift-loader-rotate {\n0% {\n    -webkit-transform: translate(-50%, -50%) rotate(0);\n}\n50% {\n    -webkit-transform: translate(-50%, -50%) rotate(-180deg);\n}\n100% {\n    -webkit-transform: translate(-50%, -50%) rotate(-360deg);\n}\n}\n@-webkit-keyframes drift-loader-before {\n0% {\n    -webkit-transform: scale(1);\n}\n10% {\n    -webkit-transform: scale(1.2) translateX(6px);\n}\n25% {\n    -webkit-transform: scale(1.3) translateX(8px);\n}\n40% {\n    -webkit-transform: scale(1.2) translateX(6px);\n}\n50% {\n    -webkit-transform: scale(1);\n}\n60% {\n    -webkit-transform: scale(0.8) translateX(6px);\n}\n75% {\n    -webkit-transform: scale(0.7) translateX(8px);\n}\n90% {\n    -webkit-transform: scale(0.8) translateX(6px);\n}\n100% {\n    -webkit-transform: scale(1);\n}\n}\n@-webkit-keyframes drift-loader-after {\n0% {\n    -webkit-transform: scale(1);\n}\n10% {\n    -webkit-transform: scale(1.2) translateX(-6px);\n}\n25% {\n    -webkit-transform: scale(1.3) translateX(-8px);\n}\n40% {\n    -webkit-transform: scale(1.2) translateX(-6px);\n}\n50% {\n    -webkit-transform: scale(1);\n}\n60% {\n    -webkit-transform: scale(0.8) translateX(-6px);\n}\n75% {\n    -webkit-transform: scale(0.7) translateX(-8px);\n}\n90% {\n    -webkit-transform: scale(0.8) translateX(-6px);\n}\n100% {\n    -webkit-transform: scale(1);\n}\n}\n.drift-zoom-pane {\n  background: rgba(0, 0, 0, 0.5);\n  /* This is required because of a bug that causes border-radius to not\n  work with child elements in certain cases. */\n  transform: translate3d(0, 0, 0);\n  -webkit-transform: translate3d(0, 0, 0);\n}\n.drift-zoom-pane.drift-opening {\n  animation: drift-fadeZoomIn 180ms ease-out;\n  -webkit-animation: drift-fadeZoomIn 180ms ease-out;\n}\n.drift-zoom-pane.drift-closing {\n  animation: drift-fadeZoomOut 210ms ease-in;\n  -webkit-animation: drift-fadeZoomOut 210ms ease-in;\n}\n.drift-zoom-pane.drift-inline {\n  position: absolute;\n  width: 150px;\n  height: 150px;\n  border-radius: 75px;\n  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);\n}\n.drift-loading .drift-zoom-pane-loader {\n  display: block;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  width: 66px;\n  height: 20px;\n  animation: drift-loader-rotate 1800ms infinite linear;\n  -webkit-animation: drift-loader-rotate 1800ms infinite linear;\n}\n.drift-zoom-pane-loader:before,\n.drift-zoom-pane-loader:after {\n  content: \"\";\n  display: block;\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 50%;\n  margin-top: -10px;\n  border-radius: 20px;\n  background: rgba(255, 255, 255, 0.9);\n}\n.drift-zoom-pane-loader:before {\n  left: 0;\n  animation: drift-loader-before 1800ms infinite linear;\n  -webkit-animation: drift-loader-before 1800ms infinite linear;\n}\n.drift-zoom-pane-loader:after {\n  right: 0;\n  animation: drift-loader-after 1800ms infinite linear;\n  -webkit-animation: drift-loader-after 1800ms infinite linear;\n  animation-delay: -900ms;\n  -webkit-animation-delay: -900ms;\n}\n.drift-bounding-box {\n  background-color: rgba(255, 255, 255, 0.35);\n  border: 1px solid #000;\n}\n", ""]);
 
 
 
@@ -575,9 +586,9 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true& ***!
   \*******************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -586,7 +597,14 @@ function toComment(sourceMap) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.options.namespace + '-base-container scroller-at-' + _vm.options.scroller_position},[_c('img',{staticClass:"responsive-image preview-box",attrs:{"src":_vm.previewImg.url,"data-zoom":_vm.previewLargeImg.url,"draggable":"false"}}),_vm._v(" "),_c('div',{staticClass:"thumb-list"},[_c('img',{staticClass:"zoomer-control responsive-image",attrs:{"src":_vm.scroller_icon_first,"alt":"move thumb icon"},on:{"click":function($event){return _vm.moveThumbs('backward')}}}),_vm._v(" "),_vm._l((_vm.thumbs),function(thumb,key){return _c('img',{directives:[{name:"show",rawName:"v-show",value:(key < _vm.options.scroll_items),expression:"key < options.scroll_items"}],key:key,staticClass:"responsive-image",class:{'choosed-thumb': thumb.id === _vm.choosedThumb.id},style:({'boxShadow' : thumb.id === _vm.choosedThumb.id ? '0px 0px 0px 2px ' + _vm.options.choosed_thumb_border_color : ''}),attrs:{"draggable":"false","src":thumb.url},on:{"mouseover":function($event){return _vm.chooseThumb(thumb, $event)},"click":function($event){return _vm.chooseThumb(thumb, $event)}}})}),_vm._v(" "),_c('img',{staticClass:"zoomer-control responsive-image",attrs:{"src":_vm.scroller_icon_second,"alt":"move thumb icon"},on:{"click":function($event){return _vm.moveThumbs('forward')}}})],2),_vm._v(" "),_c('div',{staticClass:"pane-container",attrs:{"id":_vm.pane_container_id}})])}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.options.namespace +
+      '-base-container scroller-at-' +
+      _vm.options.scroller_position},[_c('img',{staticClass:"responsive-image preview-box",attrs:{"src":_vm.previewImg.url,"data-zoom":_vm.previewLargeImg.url,"draggable":"false"}}),_vm._v(" "),_c('div',{staticClass:"thumb-list"},[_c('img',{staticClass:"zoomer-control responsive-image",attrs:{"src":_vm.scroller_icon_first,"alt":"move thumb icon"},on:{"click":function($event){return _vm.moveThumbs('backward')}}}),_vm._v(" "),_vm._l((_vm.thumbs),function(thumb,key){return _c('img',{directives:[{name:"show",rawName:"v-show",value:(key < _vm.options.scroll_items),expression:"key < options.scroll_items"}],key:key,staticClass:"responsive-image",class:{ 'choosed-thumb': thumb.id === _vm.choosedThumb.id },style:({
+        boxShadow:
+          thumb.id === _vm.choosedThumb.id
+            ? '0px 0px 0px 2px ' + _vm.options.choosed_thumb_border_color
+            : ''
+      }),attrs:{"draggable":"false","src":thumb.url},on:{"mouseover":function($event){return _vm.chooseThumb(thumb, $event)},"click":function($event){return _vm.chooseThumb(thumb, $event)}}})}),_vm._v(" "),_c('img',{staticClass:"zoomer-control responsive-image",attrs:{"src":_vm.scroller_icon_second,"alt":"move thumb icon"},on:{"click":function($event){return _vm.moveThumbs('forward')}}})],2),_vm._v(" "),_c('div',{staticClass:"pane-container",attrs:{"id":_vm.pane_container_id}})])}
 var staticRenderFns = []
 
 
@@ -725,9 +743,9 @@ var update = add("4f185cd4", content, true, {});
 
 /***/ }),
 
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&":
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js??ref--2-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& ***!
+  !*** ./node_modules/vue-style-loader!./node_modules/css-loader/dist/cjs.js??ref--2-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -735,13 +753,13 @@ var update = add("4f185cd4", content, true, {});
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--2-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--2-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&");
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! ../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("44deb5fe", content, true, {});
+var update = add("79e69bf5", content, true, {});
 
 /***/ }),
 
@@ -2023,10 +2041,10 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5v
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true& */ "./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true&");
+/* harmony import */ var _ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true& */ "./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true&");
 /* harmony import */ var _ProductZoomer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=script&lang=js& */ "./src/components/ProductZoomer.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _ProductZoomer_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=style&index=0&lang=css& */ "./src/components/ProductZoomer.vue?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& */ "./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&");
+/* harmony import */ var _ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& */ "./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2039,11 +2057,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
   _ProductZoomer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "1b48a352",
+  "6a55e2d9",
   null
   
 )
@@ -2082,35 +2100,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&":
+/***/ "./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&":
 /*!***************************************************************************************************!*\
-  !*** ./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& ***!
+  !*** ./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader!../../node_modules/css-loader/dist/cjs.js??ref--2-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=1b48a352&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_1b48a352_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-style-loader!../../node_modules/css-loader/dist/cjs.js??ref--2-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css& */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=style&index=1&id=6a55e2d9&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_2_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_style_index_1_id_6a55e2d9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ "./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true&":
+/***/ "./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true&":
 /*!*************************************************************************************!*\
-  !*** ./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true& ***!
+  !*** ./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true& ***!
   \*************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=template&id=1b48a352&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/ProductZoomer.vue?vue&type=template&id=6a55e2d9&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_1b48a352_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductZoomer_vue_vue_type_template_id_6a55e2d9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
