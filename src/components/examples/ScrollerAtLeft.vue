@@ -3,15 +3,18 @@
     <div class="hero-body is-fullheight">
       <div class="container">
         <div class="columns is-centered is-vcentered">
-            <ProductZoomer :base-images="images" :base-zoomer-options="zoomerOptions"/>
-            <div style="margin-left: 2em">
-                <h1 class="title is-4 has-text-centered">
-                  <span itemprop="name">Scroller Left & Pane Right</span>
-                </h1>
-                <pre>
+          <ProductZoomer
+            :base-images="images"
+            :base-zoomer-options="zoomerOptions"
+          />
+          <div style="margin-left: 2em">
+            <h1 class="title is-4 has-text-centered">
+              <span itemprop="name">Scroller Left & Pane Right</span>
+            </h1>
+            <pre>
                   <code class="javascript">
                     let zoomerOptions = {
-                        zoomFactor: 3,
+                        zoomFactor: 5,
                         pane: "pane",
                         hoverDelay: 300,
                         namespace: "zoomer-left",
@@ -23,7 +26,7 @@
                     }
                   </code>
                 </pre>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -187,7 +190,8 @@ export default {
         move_by_click: false,
         scroll_items: 4,
         choosed_thumb_border_color: "#dd2c00",
-        scroller_position: "left"
+        scroller_position: "left",
+        zoomer_pane_position: "right"
       }
     };
   },
@@ -196,4 +200,3 @@ export default {
   }
 };
 </script>
-

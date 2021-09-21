@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <header class="hero-head">
-      <Navbar/>
+      <Navbar />
     </header>
     <ScrollerAtTop />
     <hr class="hr" />
@@ -14,6 +14,7 @@
     <InsideRound />
     <hr class="hr" />
     <InsideContainer />
+    <hr class="hr" />
   </div>
 </template>
 
