@@ -1,16 +1,6 @@
-# Welcome to Vue Product Zoomer 👋
-
-![Version](https://img.shields.io/badge/version-3.0.0-blue.svg?cacheSeconds=2592000)
-[![npm](https://img.shields.io/npm/dt/vue-product-zoomer.svg)](https://www.npmjs.com/package/vue-product-zoomer)
-[![GitHub issues](https://img.shields.io/github/issues/akulubala/vue-product-zoomer.svg)](https://github.com/akulubala/vue-product-zoomer/issues)
-[![GitHub license](https://img.shields.io/github/license/akulubala/vue-product-zoomer.svg)](https://github.com/akulubala/vue-product-zoomer/blob/master/LICENSE)
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://yoohooworld.com)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/akulubala/vue-product-zoomer/graphs/commit-activity)
-[![Twitter: akulubala](https://img.shields.io/twitter/follow/akulubala.svg?style=social)](https://twitter.com/akulubala)
+# Welcome to Vue Product Zoomer for Nuxt 👋
 
 > A Image Zoomer For Eshop Website.Saving Your Time...
-
-### 🏠 [Homepage](https://yoohooworld.com/demo.html)
 
 ## Install
 
@@ -86,17 +76,3 @@ Vue.use(ProductZoomer)
 - Github: [@akulubala](https://github.com/akulubala)
 
 - Fixed for Nuxt (thsnyzkn)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check [issues page](https://github.com/akulubala/vue-product-zoomer/issues).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
