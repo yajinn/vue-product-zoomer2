@@ -235,7 +235,7 @@
 
 .drift-zoom-pane-loader:before,
 .drift-zoom-pane-loader:after {
-  content: '';
+  content: "";
   display: block;
   width: 20px;
   height: 20px;
@@ -261,5 +261,6 @@
 }
 
 .drift-bounding-box {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid #000;
 }
