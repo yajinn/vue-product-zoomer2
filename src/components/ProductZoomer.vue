@@ -497,21 +497,20 @@ export default {
   grid-row: 2 / 3;
   visibility: hidden;
 }
-
 .scroller-at-left {
   display: grid;
+
   grid-template-columns: 1fr;
 }
-
 .scroller-at-left .preview-box {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   border-radius: 4px;
   cursor: crosshair;
 }
-
 .scroller-at-left .thumb-list {
   display: grid;
+  grid-gap: 20px;
   grid-row-gap: 0;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
