@@ -74,12 +74,11 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
   } else if (PanePosition === "right") {
     caculatedPosition =
       "width:" +
-      30 +
       rect.width +
       "px;height:" +
       rect.height +
       "px;left:" +
-      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) +
+      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 35) +
       "px;";
   }
 
