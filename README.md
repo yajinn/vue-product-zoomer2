@@ -83,6 +83,7 @@ Vue.use(ProductZoomer)
 * Twitter: [@akulubala](https://twitter.com/akulubala)
 * Github: [@akulubala](https://github.com/akulubala)
 
+* Fixed for Nuxt (thsnyzkn)
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
