@@ -1,6 +1,6 @@
 {
   "name": "vue-product-zoom",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "main": "dist/assets/js/app.bundle.js",
   "description": "Vue Package for responsive Zoom Product Images . Under Bootstrap 3 environment.",
   "author": "yajinn@gmail.com",

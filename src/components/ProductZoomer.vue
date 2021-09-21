@@ -431,7 +431,7 @@ export default {
         .setAttribute(
           "style",
           "width:" +
-          (previewImg.naturalWidth + thumbListWidth + 20) + // 2px for grid gap
+            (previewImg.naturalWidth + thumbListWidth + 2) +
             "px;position:relative"
         );
       document
@@ -444,7 +444,8 @@ export default {
             previewImg.naturalHeight +
             "px;width:" +
             thumbListWidth +
-            "px;;visibility:visible;"
+            20 +
+            "px;visibility:visible;"
         );
     },
     previewBoxClicked() {
@@ -515,6 +516,7 @@ export default {
   grid-row: 1 / 2;
   visibility: hidden;
   justify-items: center;
+  padding-right: 20px;
 }
 
 .scroller-at-right {
