@@ -11,6 +11,7 @@
       :data-zoom="previewLargeImg.url"
       class="responsive-image preview-box"
       draggable="false"
+      @click="previewBoxClicked"
     />
     <div class="thumb-list">
       <img
@@ -79,7 +80,7 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
       rect.height +
       "px;left:" +
       "px;left:" +
-      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 35) +
+      (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) +
       "px;";
   }
 
@@ -226,6 +227,7 @@ export default {
       if (this.drift !== null) {
         this.drift.setZoomImageURL(matchLargeImg.url);
       }
+      this.$emit("choosenImage", thumb.id);
     }
   },
   created() {
@@ -442,14 +444,11 @@ export default {
             previewImg.naturalHeight +
             "px;width:" +
             thumbListWidth +
-            "px;grid-template-rows:calc(100%/" +
-            scrollerItemsCount +
-            "/2) repeat(" +
-            (scrollerItemsCount - 2) +
-            ", auto) calc(100%/" +
-            scrollerItemsCount +
-            "/2);visibility:visible;"
+            "px;;visibility:visible;"
         );
+    },
+    previewBoxClicked() {
+      this.$emit("previewBoxClicked", true);
     }
   }
 };
@@ -490,7 +489,6 @@ export default {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-
 .scroller-at-bottom .thumb-list {
   display: grid;
   align-items: center;
@@ -502,22 +500,24 @@ export default {
 
 .scroller-at-left {
   display: grid;
-  grid-gap: 2px;
   grid-template-columns: 1fr;
 }
 
 .scroller-at-left .preview-box {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  border-radius: 4px;
+  cursor: crosshair;
 }
 
 .scroller-at-left .thumb-list {
   display: grid;
-  grid-row-gap: 0.2em;
+  grid-row-gap: 0;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   visibility: hidden;
   justify-items: center;
+  padding-right: 20px;
 }
 
 .scroller-at-right {
@@ -529,6 +529,8 @@ export default {
 .scroller-at-right .preview-box {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .scroller-at-right .thumb-list {
@@ -542,8 +544,9 @@ export default {
 
 .scroller-at-right .thumb-list .responsive-image,
 .scroller-at-left .thumb-list .responsive-image {
-  width: auto;
-  height: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .scroller-at-top .thumb-list .responsive-image,
@@ -553,15 +556,21 @@ export default {
 }
 
 .zoomer-control {
-  cursor: pointer;
+  height: 24px !important;
+  width: 100% !important;
+  z-index: 5;
+  border: 2px solid #654ea3;
 }
 .choosed-thumb {
   border-radius: 0px;
+  border-width: 2px;
 }
 .pane-container {
   display: none;
   position: absolute;
   z-index: 1000;
   pointer-events: none;
+  border-radius: 4px;
+  overflow: hidden;
 }
 </style>

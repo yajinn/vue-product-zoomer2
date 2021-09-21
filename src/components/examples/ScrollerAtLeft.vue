@@ -6,6 +6,8 @@
           <ProductZoomer
             :base-images="images"
             :base-zoomer-options="zoomerOptions"
+            @choosenImage="choosenImageHandler"
+            @previewBoxClicked="previewBoxClickedHandler"
           />
           <div style="margin-left: 2em">
             <h1 class="title is-4 has-text-centered">
@@ -187,8 +189,8 @@ export default {
         pane: "pane",
         hoverDelay: 300,
         namespace: "zoomer-left",
-        move_by_click: false,
-        scroll_items: 4,
+        move_by_click: true,
+        scroll_items: 5,
         choosed_thumb_border_color: "#dd2c00",
         scroller_position: "left",
         zoomer_pane_position: "right"
@@ -197,6 +199,14 @@ export default {
   },
   components: {
     ProductZoomer
+  },
+  methods: {
+    choosenImageHandler(choosenImage) {
+      console.log(choosenImage);
+    },
+    previewBoxClickedHandler(status) {
+      console.log(status);
+    }
   }
 };
 </script>

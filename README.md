@@ -17,6 +17,8 @@ Vue.use(ProductZoomer)
 <ProductZoomer
   :base-images="images"
   :base-zoomer-options="zoomerOptions"
+  @choosenImage="choosenImageHandler"
+  @previewBoxClicked="previewBoxClickedHandler"
 />
 
 ```
@@ -76,3 +78,4 @@ Vue.use(ProductZoomer)
 - Github: [@akulubala](https://github.com/akulubala)
 
 - Fixed for Nuxt (thsnyzkn)
+- Edited by (@yajinn)
