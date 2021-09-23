@@ -11,7 +11,6 @@
       :data-zoom="previewLargeImg.url"
       class="responsive-image preview-box"
       draggable="false"
-      data-fancybox="gallery"
       @click="previewBoxClicked"
     />
     <div class="thumb-list">
