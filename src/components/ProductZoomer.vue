@@ -443,8 +443,7 @@ export default {
           "height:" +
             previewImg.naturalHeight +
             "px;width:" +
-            thumbListWidth +
-            20 +
+            (thumbListWidth + 20) +
             "px;visibility:visible;"
         );
     },
