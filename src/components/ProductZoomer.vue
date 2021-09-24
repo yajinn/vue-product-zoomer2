@@ -70,7 +70,7 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
       "px;height:" +
       rect.height +
       "px;left:" +
-      (paneStyle === "container" ? 0 : 0 - rect.width - window.scrollX - 5) +
+      (paneStyle === "container" ? 0 : 0 - rect.width - window.scrollX - 25) +
       "px;";
   } else if (PanePosition === "right") {
     caculatedPosition =
@@ -423,9 +423,10 @@ export default {
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
       let thumbListWidth =
-        ((thumbList.children[1].naturalWidth *
+        (thumbList.children[1].naturalWidth *
           (previewImg.naturalHeight / thumbList.children[1].naturalHeight)) /
-        (scrollerItemsCount - 1)) + 20;
+          (scrollerItemsCount - 1) +
+        20;
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
@@ -484,7 +485,6 @@ export default {
   grid-template-columns: 1fr;
   align-items: center;
 }
-
 .scroller-at-bottom .preview-box {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -515,22 +515,18 @@ export default {
   grid-row: 1 / 2;
   visibility: hidden;
   justify-items: center;
-  padding-right: 20px;
 }
-
 .scroller-at-right {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: 1fr;
 }
-
 .scroller-at-right .preview-box {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   overflow: hidden;
   border-radius: 4px;
 }
-
 .scroller-at-right .thumb-list {
   display: grid;
   grid-row-gap: 0.2em;
@@ -566,7 +562,7 @@ export default {
 .pane-container {
   display: none;
   position: absolute;
-  z-index: 1000;
+  z-index: 50;
   pointer-events: none;
   border-radius: 4px;
   overflow: hidden;
