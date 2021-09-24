@@ -423,9 +423,9 @@ export default {
         "." + this.options.namespace + "-base-container " + ".thumb-list"
       );
       let thumbListWidth =
-        (thumbList.children[1].naturalWidth *
+        ((thumbList.children[1].naturalWidth *
           (previewImg.naturalHeight / thumbList.children[1].naturalHeight)) /
-        (scrollerItemsCount - 1);
+        (scrollerItemsCount - 1)) + 20;
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
@@ -443,7 +443,7 @@ export default {
           "height:" +
             previewImg.naturalHeight +
             "px;width:" +
-            (thumbListWidth + 20) +
+            thumbListWidth +
             "px;visibility:visible;"
         );
     },
