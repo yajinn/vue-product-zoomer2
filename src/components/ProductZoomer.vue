@@ -552,8 +552,8 @@ export default {
   height: 24px !important;
   width: 85px !important;
   z-index: 5;
-  /*border: 2px solid #654ea3;*/
-  background: #dbdbdb;
+  background: #dbdbdb !important;
+  border: none;
 }
 .choosed-thumb {
   border-radius: 0px;
