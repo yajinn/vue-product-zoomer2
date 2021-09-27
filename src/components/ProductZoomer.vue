@@ -513,7 +513,6 @@ export default {
   grid-row-gap: 0;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  visibility: hidden;
   justify-items: center;
 }
 .scroller-at-right {
