@@ -83,7 +83,7 @@ const getCaculatedPanePosition = (paneStyle = "pane", rect, PanePosition) => {
       (paneStyle === "container" ? 0 : rect.width + window.scrollX + 5) +
       "px;";
   }
-
+  console.log("caculatedPosition :", caculatedPosition);
   return caculatedPosition;
 };
 
@@ -425,14 +425,13 @@ export default {
       let thumbListWidth =
         (thumbList.children[1].naturalWidth *
           (previewImg.naturalHeight / thumbList.children[1].naturalHeight)) /
-          (scrollerItemsCount - 1) +
-        20;
+        (scrollerItemsCount - 1);
       document
         .querySelector("." + this.options.namespace + "-base-container")
         .setAttribute(
           "style",
           "width:" +
-            (previewImg.naturalWidth + thumbListWidth + 2) +
+          (previewImg.naturalWidth + thumbListWidth + 2) + // 2px for grid gap
             "px;position:relative"
         );
       document
@@ -445,7 +444,13 @@ export default {
             previewImg.naturalHeight +
             "px;width:" +
             thumbListWidth +
-            "px;visibility:visible;"
+            "px;grid-template-rows:calc(100%/" +
+            scrollerItemsCount +
+            "/2) repeat(" +
+            (scrollerItemsCount - 2) +
+            ", auto) calc(100%/" +
+            scrollerItemsCount +
+            "/2);visibility:visible;"
         );
     },
     previewBoxClicked() {
@@ -499,8 +504,9 @@ export default {
 }
 .scroller-at-left {
   display: grid;
-
+  grid-gap: 2px;
   grid-template-columns: 1fr;
+  align-items: center;
 }
 .scroller-at-left .preview-box {
   grid-column: 2 / 3;
@@ -510,10 +516,11 @@ export default {
 }
 .scroller-at-left .thumb-list {
   display: grid;
-  grid-row-gap: 0;
+  justify-items: center;
+  grid-column-gap: 0.1em;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  justify-items: center;
+  visibility: hidden;
 }
 .scroller-at-right {
   display: grid;
